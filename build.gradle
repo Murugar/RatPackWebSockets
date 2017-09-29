@@ -1,0 +1,27 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'io.ratpack:ratpack-gradle:1.4.6'
+    }
+}
+
+
+
+
+
+apply plugin: 'io.ratpack.ratpack-java'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile ratpack.dependency("rx")
+
+    runtime 'org.slf4j:slf4j-simple:1.7.22'
+}
+
+mainClassName = "com.iqmsoft.ratpack.websockets.Main"
